@@ -6,7 +6,6 @@ import {
   Hero,
   HowWeWork,
   InnovativeServices,
-  ROICalculatorHome,
   AnimatedFooter,
   MouseMoveEffect,
 } from "@/components/landing"
@@ -24,7 +23,6 @@ export default function Index() {
         <Hero />
         <HowWeWork />
         <InnovativeServices />
-        <ROICalculatorHome />
         <AnimatedFooter />
       </div>
     </div>
