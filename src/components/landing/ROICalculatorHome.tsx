@@ -5,31 +5,31 @@ import { TrendingUp, Target, Briefcase, Palette, Home, BarChart3 } from "lucide-
 const businessTypes = [
   {
     id: "retail",
-    name: "Ритейл",
+    name: "Магазин / Услуги",
     icon: <Briefcase className="w-6 h-6" />,
-    multiplier: 3.2,
-    description: "E-commerce и магазины",
+    multiplier: 3.4,
+    description: "Товары и B2C услуги",
   },
   {
     id: "real-estate",
     name: "Недвижимость",
     icon: <Home className="w-6 h-6" />,
-    multiplier: 4.1,
-    description: "Агенты и управление",
+    multiplier: 4.2,
+    description: "Агенты и застройщики",
   },
   {
     id: "artist",
-    name: "Креатив",
+    name: "Эксперт / Блогер",
     icon: <Palette className="w-6 h-6" />,
-    multiplier: 2.8,
-    description: "Блогеры и артисты",
+    multiplier: 3.1,
+    description: "Инфобизнес и обучение",
   },
   {
     id: "professional",
-    name: "B2B услуги",
+    name: "B2B / Корпоратив",
     icon: <Target className="w-6 h-6" />,
-    multiplier: 3.7,
-    description: "Консалтинг и сервисы",
+    multiplier: 3.9,
+    description: "Консалтинг и оптовики",
   },
 ]
 
@@ -68,7 +68,7 @@ export default function ROICalculatorHome() {
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">Рассчитайте ROI</h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Узнайте, какую выручку вы можете получить с нашими маркетинговыми стратегиями
+            Узнайте, сколько вы заработаете с продвижением в Telegram и Max
           </p>
         </motion.div>
 

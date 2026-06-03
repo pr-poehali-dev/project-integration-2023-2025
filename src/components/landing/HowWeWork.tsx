@@ -4,24 +4,24 @@ import { Search, Lightbulb, Rocket } from "lucide-react"
 const steps = [
   {
     number: "01",
-    title: "Анализ и стратегия",
-    description: "Глубоко погружаемся в ваши задачи, исследуем идеи и формируем стратегию для долгосрочного успеха.",
+    title: "Аудит и стратегия",
+    description: "Изучаем ваш бизнес, анализируем конкурентов в мессенджерах и разрабатываем контент-стратегию под вашу аудиторию.",
     icon: <Search className="w-8 h-8" />,
     mockup: "discovery",
     gradient: "from-blue-500/20 to-blue-600/10",
   },
   {
     number: "02",
-    title: "Разработка и тесты",
-    description: "Создаем решения под ваши цели и тщательно тестируем их для максимальной надежности.",
+    title: "Запуск и контент",
+    description: "Настраиваем канал, создаём воронки продаж, чат-боты и публикуем первый контент, который вовлекает и продаёт.",
     icon: <Lightbulb className="w-8 h-8" />,
     mockup: "development",
     gradient: "from-purple-500/20 to-purple-600/10",
   },
   {
     number: "03",
-    title: "Запуск и поддержка",
-    description: "Бесшовно внедряем решение и обеспечиваем его стабильную работу с постоянной поддержкой.",
+    title: "Рост и результат",
+    description: "Запускаем рекламу, масштабируем аудиторию и ежемесячно отчитываемся по охватам, подписчикам и продажам.",
     icon: <Rocket className="w-8 h-8" />,
     mockup: "launch",
     gradient: "from-green-500/20 to-green-600/10",
@@ -41,7 +41,7 @@ export default function HowWeWork() {
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">Как мы работаем</h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Простой и эффективный подход к развитию вашего бренда на высшем уровне.
+            Три простых шага — и ваш бизнес начинает расти в Telegram и Max.
           </p>
         </motion.div>
 

@@ -5,43 +5,43 @@ import AnimatedButton from "./AnimatedButton"
 
 const services = [
   {
-    title: "Таргетированная реклама",
+    title: "Ведение канала в Telegram",
     description:
-      "Стимулируем рост и вовлечение через data-driven рекламу в соцсетях с таргетированными стратегиями для развития бренда.",
+      "Создаём и ведём Telegram-канал вашего бизнеса: регулярный контент, рост аудитории и вовлечение подписчиков.",
     mockup: "social",
   },
   {
-    title: "Google Ads",
+    title: "Продвижение в Max",
     description:
-      "Достигаем клиентов в нужный момент с Google Ads, привлекая трафик и продажи через таргетированную рекламу.",
+      "Развиваем ваше присутствие в мессенджере Max: сообщество, контент-план и продвижение среди целевой аудитории.",
     mockup: "google-ads",
   },
   {
-    title: "Email / SMS",
-    description: "Достигаем клиентов через таргетированный email и SMS маркетинг, стимулируя продажи и лояльность.",
+    title: "Воронки продаж",
+    description: "Строим автоматические воронки в мессенджерах: чат-боты, серии сообщений и конверсия в покупку.",
     mockup: "email",
   },
   {
-    title: "SEO",
+    title: "Реклама в мессенджерах",
     description:
-      "Повышаем видимость в поисковых системах: аудит сайта, анализ ключевых слов и комплексная оптимизация.",
+      "Запускаем рекламу в Telegram Ads и Max: точный таргетинг, рост подписчиков и прямые продажи.",
     mockup: "seo",
   },
   {
-    title: "Аналитика",
+    title: "Аналитика и отчёты",
     description:
-      "Отслеживаем эффективность и получаем инсайты с комплексной аналитикой для принятия data-driven решений.",
+      "Отслеживаем охваты, конверсии и ROI. Еженедельные отчёты с чёткими цифрами и рекомендациями.",
     mockup: "analytics",
   },
   {
-    title: "Веб-разработка",
+    title: "Комплексное ведение",
     description:
-      "Создаем сайты любой сложности: от лендингов до крупных порталов, с гибкими тарифами под ваши задачи.",
+      "Берём на себя все мессенджеры бизнеса: стратегия, контент, реклама и поддержка подписчиков под ключ.",
     mockup: "web-dev",
     badges: [
-      { icon: <Shield className="w-4 h-4" />, text: "SSL-защита" },
-      { icon: <DollarSign className="w-4 h-4" />, text: "Без абонплаты" },
-      { icon: <CheckCircle className="w-4 h-4" />, text: "Uptime 99.9%" },
+      { icon: <Shield className="w-4 h-4" />, text: "Telegram + Max" },
+      { icon: <DollarSign className="w-4 h-4" />, text: "Без переплат" },
+      { icon: <CheckCircle className="w-4 h-4" />, text: "Гарантия роста" },
     ],
   },
 ]
@@ -59,9 +59,9 @@ export default function InnovativeServices() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">Услуги для роста бизнеса</h2>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">Услуги GoChat</h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Индивидуальные решения для оптимизации, инноваций и масштабирования.
+            Полный цикл продвижения бизнеса в Telegram и Max — от стратегии до продаж.
           </p>
         </motion.div>
 

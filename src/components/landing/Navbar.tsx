@@ -50,7 +50,7 @@ export default function Navbar() {
             <div className="flex items-center">
               <a href="/" className="flex items-center space-x-3">
                 <span className="text-xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Pulse Digital
+                  GoChat
                 </span>
               </a>
             </div>
