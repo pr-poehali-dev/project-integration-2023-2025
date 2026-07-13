@@ -1,12 +1,13 @@
-import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
-
+import { Menu, X, ChevronDown } from "lucide-react"
 import { useState } from "react"
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
 import AnimatedButton from "./AnimatedButton"
+import { services } from "@/data/services"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
 
   return (
     <header className="fixed top-4 left-4 right-4 z-50 mx-auto max-w-7xl">
@@ -49,42 +50,71 @@ export default function Navbar() {
         <div className="relative z-10 px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
-              <a href="/" className="flex items-center space-x-3">
+              <Link to="/" className="flex items-center space-x-3">
                 <span className="text-xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  GoChat
+                  GO CHAT
                 </span>
-              </a>
+              </Link>
             </div>
 
             <div className="hidden md:block">
               <div className="flex items-center space-x-8">
-                <a href="#services" className="text-sm text-gray-300 hover:text-blue-400 transition-colors">
-                  Услуги
-                </a>
-                <a href="#artists" className="text-sm text-gray-300 hover:text-purple-400 transition-colors">
-                  Клиенты
-                </a>
-                <a href="#success-stories" className="text-sm text-gray-300 hover:text-green-400 transition-colors">
+                <div
+                  className="relative"
+                  onMouseEnter={() => setIsServicesOpen(true)}
+                  onMouseLeave={() => setIsServicesOpen(false)}
+                >
+                  <button className="flex items-center text-sm text-gray-300 hover:text-blue-400 transition-colors">
+                    Услуги
+                    <ChevronDown className="ml-1 h-3 w-3" />
+                  </button>
+                  {isServicesOpen && (
+                    <div className="absolute top-full left-0 pt-3 w-64">
+                      <div className="bg-gray-900 border border-gray-800 rounded-xl shadow-xl p-2">
+                        {services.map((s) => (
+                          <Link
+                            key={s.slug}
+                            to={`/${s.slug}`}
+                            className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
+                          >
+                            {s.navTitle}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+                <a href="/#cases" className="text-sm text-gray-300 hover:text-green-400 transition-colors">
                   Кейсы
                 </a>
-                <a href="#contact" className="text-sm text-gray-300 hover:text-orange-400 transition-colors">
+                <a href="/#faq" className="text-sm text-gray-300 hover:text-orange-400 transition-colors">
+                  Вопросы
+                </a>
+                <a href="/#contact" className="text-sm text-gray-300 hover:text-purple-400 transition-colors">
                   Контакты
                 </a>
               </div>
             </div>
 
             <div className="hidden md:flex items-center space-x-4">
-              <a href="#get-started">
+              <a href="/#get-started">
                 <AnimatedButton size="sm" className="bg-white text-black hover:bg-gray-100">
-                  Начать
+                  Получить расчёт
                 </AnimatedButton>
               </a>
             </div>
 
             <div className="md:hidden">
-              <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                {isMenuOpen ? <X className="h-5 w-5 text-gray-300" /> : <Menu className="h-5 w-5 text-gray-300" />}
-              </Button>
+              <Menu
+                className="h-5 w-5 text-gray-300 cursor-pointer"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                style={{ display: isMenuOpen ? "none" : "block" }}
+              />
+              <X
+                className="h-5 w-5 text-gray-300 cursor-pointer"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                style={{ display: isMenuOpen ? "block" : "none" }}
+              />
             </div>
           </div>
         </div>
@@ -93,21 +123,25 @@ export default function Navbar() {
         {isMenuOpen && (
           <div className="md:hidden border-t border-gray-700/50 bg-gray-900/80 backdrop-blur-md rounded-b-2xl">
             <div className="px-6 py-4 space-y-3">
-              <a href="#services" className="block text-gray-300 hover:text-blue-400">
-                Услуги
-              </a>
-              <a href="#artists" className="block text-gray-300 hover:text-purple-400">
-                Клиенты
-              </a>
-              <a href="#success-stories" className="block text-gray-300 hover:text-green-400">
+              {services.map((s) => (
+                <Link key={s.slug} to={`/${s.slug}`} className="block text-gray-300 hover:text-blue-400">
+                  {s.navTitle}
+                </Link>
+              ))}
+              <a href="/#cases" className="block text-gray-300 hover:text-green-400">
                 Кейсы
               </a>
-              <a href="#contact" className="block text-gray-300 hover:text-orange-400">
+              <a href="/#faq" className="block text-gray-300 hover:text-orange-400">
+                Вопросы
+              </a>
+              <a href="/#contact" className="block text-gray-300 hover:text-purple-400">
                 Контакты
               </a>
               <div className="pt-3 border-t border-gray-700">
-                <a href="#get-started" className="block">
-                  <AnimatedButton className="w-full bg-white text-black hover:bg-gray-100">Начать</AnimatedButton>
+                <a href="/#get-started" className="block">
+                  <AnimatedButton className="w-full bg-white text-black hover:bg-gray-100">
+                    Получить расчёт
+                  </AnimatedButton>
                 </a>
               </div>
             </div>

@@ -4,8 +4,15 @@ import {
   BackgroundStripes,
   Navbar,
   Hero,
-  HowWeWork,
-  InnovativeServices,
+  PainPoints,
+  CasesSection,
+  ComparisonTable,
+  ServicesCatalog,
+  QuizCalculator,
+  TestimonialsSlider,
+  ProcessTimeline,
+  FaqSection,
+  FinalCta,
   AnimatedFooter,
   MouseMoveEffect,
 } from "@/components/landing"
@@ -21,8 +28,15 @@ export default function Index() {
       <div className="relative z-10">
         <Navbar />
         <Hero />
-        <HowWeWork />
-        <InnovativeServices />
+        <PainPoints />
+        <CasesSection />
+        <ComparisonTable />
+        <ServicesCatalog />
+        <QuizCalculator />
+        <TestimonialsSlider />
+        <ProcessTimeline />
+        <FaqSection />
+        <FinalCta />
         <AnimatedFooter />
       </div>
     </div>
